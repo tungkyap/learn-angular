@@ -11,9 +11,10 @@
   <div class="course-card">
 
       <div class="course-title">
-          Angular Core Deep Dive
+        <strong>{{ data.title }}</strong>
       </div>
       <img width="300" alt="Angular Logo"
+          (click)="onImgClicked()"
            src="https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-core-in-depth-small.png">
 
       <div class="course-description">
@@ -22,5 +23,7 @@
 
   </div>
 
+  <input class="demo" (keyup)="onKeyUp(titleInput.value)" [value]="data.title" #titleInput>
 </div>
+
 
